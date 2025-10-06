@@ -15,44 +15,40 @@ typedef enum{
     name of the operation or
     command and `VALUE` is the binary
     digits.
-    NOTICE: You must keep the NULL.
     */
-    NULL = NULL;
-} MY_ISA;
+    NULL = 00000000; // Change the `00000000` with your null command.
+} MY_ISA; // Your ISA's name.
 
 int main()
 {
-    const char *filename = "my_file";
-    /*
-    Replace `my_file` with your file
-    name.
-    */
+    const char *filename = "my_file"; // Replace `my_file` with your file's name.
 
     FILE *fp = fopen(filename, "r");
-    /*
-    Replace `my_file` with the name
-    of your file.
-    */
 
     if(fp == NULL)
     {
         return 1;
     }
 
-    const int size = 1024;
-    /*
-    Replace the number `1024` with
-    your max file size.
-    */
+    const int size = 1024; // Your file's max size.
   
     MY_ISA buffer[size] = {NULL};
+    
+    fread(buffer, sizeof(MY_ISA), size, filename);
+    // Replace `MY_ISA` with yours.
 
-    fread(buffer, 1, size, filename);
-
-    /*
-    The code in this zone will be
-    finished soon...
-    */
-  
+    execute(buffer);
+    
     fclose(filename);
+}
+
+void execute(MY_ISA code[]) // Replace `MY_ISA` with yours.
+{
+    int i = 0;
+
+    while(code[i] != NULL)
+    {
+        //...
+        i++;
+    }
 }
