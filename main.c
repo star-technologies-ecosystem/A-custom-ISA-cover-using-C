@@ -6,17 +6,21 @@ development.
 // Libraries
 #include <stdio.h>
 
+// Functions prototypes
+/*
+Put all your functions' prototypes here
+so you can use them while defining
+the ISA.
+*/
+
 // ISA
-typedef enum{
-    /*
-    Put your ISA valid commands
-    like that `COMMAND = FUNCTION`.
-    In this example, `COMMAND` is the
-    binary digits and `FUNCTION` is
-    the operation's function.
-    */
-    NULL = 00000000; // Change the `00000000` with your null command.
-} MY_ISA; // Your ISA's name.
+/*
+Define your valid commands like that:
+`#define COMMAND FUNCTION`, where
+`COMMAND` is your binary code and
+`FUNCTION` is the operation's C
+function.
+*/
 
 int main()
 {
