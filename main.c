@@ -10,11 +10,10 @@ development.
 typedef enum{
     /*
     Put your ISA valid commands
-    like that `NAME = VALUE`.
-    In this example, `NAME` is the
-    name of the operation or
-    command and `VALUE` is the binary
-    digits.
+    like that `COMMAND = FUNCTION`.
+    In this example, `COMMAND` is the
+    binary digits and `FUNCTION` is
+    the operation's function.
     */
     NULL = 00000000; // Change the `00000000` with your null command.
 } MY_ISA; // Your ISA's name.
@@ -34,5 +33,12 @@ int main()
     
     fread(buffer, sizeof(MY_ISA), size, filename); // Replace `MY_ISA` with yours.
     
+    int i = 0;
+    while(i != size)
+    {
+        
+    }
+    
     fclose(filename);
+    return 0;
 }
